@@ -1,0 +1,31 @@
+{
+  "notice": "Entirely synthetic fixture. No production, personal, or customer data.",
+  "Consultants": [
+    { "ConsultantKey": "SYN-C001", "DisplayLabel": "Synthetic Consultant 001", "Active": true, "RoleCode": "Delivery", "RegionCode": "Region-A", "StartDate": "2024-01-15" },
+    { "ConsultantKey": "SYN-C002", "DisplayLabel": "Synthetic Consultant 002", "Active": true, "RoleCode": "Analyst", "RegionCode": "Region-B", "StartDate": "2025-03-01" }
+  ],
+  "Skills": [
+    { "SkillKey": "SYN-S001", "SkillName": "Data Modeling", "Category": "Technical", "Active": true },
+    { "SkillKey": "SYN-S002", "SkillName": "Process Design", "Category": "Business", "Active": true }
+  ],
+  "ConsultantSkills": [
+    { "ConsultantSkillKey": "SYN-CS001", "ConsultantKey": "SYN-C001", "SkillKey": "SYN-S001", "Proficiency": "Advanced", "VerifiedOn": "2026-09-01", "VerificationStatus": "Verified" },
+    { "ConsultantSkillKey": "SYN-CS002", "ConsultantKey": "SYN-C002", "SkillKey": "SYN-S002", "Proficiency": "Intermediate", "VerifiedOn": "2026-08-15", "VerificationStatus": "Verified" }
+  ],
+  "ClientDemand": [
+    { "DemandKey": "SYN-D001", "SkillKey": "SYN-S001", "StartDate": "2026-11-01", "EndDate": "2026-12-31", "RequiredFTE": 1.0, "Priority": "High", "Status": "Open" },
+    { "DemandKey": "SYN-D002", "SkillKey": "SYN-S002", "StartDate": "2026-11-15", "EndDate": "2027-01-15", "RequiredFTE": 0.5, "Priority": "Normal", "Status": "Open" }
+  ],
+  "Assignments": [
+    { "AssignmentKey": "SYN-A001", "ConsultantKey": "SYN-C001", "DemandKey": "SYN-D001", "StartDate": "2026-10-01", "EndDate": "2026-11-15", "AllocationPercent": 50, "Status": "Active" },
+    { "AssignmentKey": "SYN-A002", "ConsultantKey": "SYN-C002", "DemandKey": "SYN-D002", "StartDate": "2026-11-15", "EndDate": "2027-01-15", "AllocationPercent": 40, "Status": "Planned" }
+  ],
+  "TrainingProgress": [
+    { "TrainingProgressKey": "SYN-T001", "ConsultantKey": "SYN-C001", "CourseCode": "SYN-COURSE-01", "Status": "Completed", "DueDate": "2026-10-31", "CompletedOn": "2026-09-20" },
+    { "TrainingProgressKey": "SYN-T002", "ConsultantKey": "SYN-C002", "CourseCode": "SYN-COURSE-02", "Status": "InProgress", "DueDate": "2026-12-15", "CompletedOn": null }
+  ],
+  "Availability": [
+    { "AvailabilityKey": "SYN-AV001", "ConsultantKey": "SYN-C001", "StartDate": "2026-11-01", "EndDate": "2026-11-07", "AvailableHoursPerWeek": 20, "Status": "Confirmed" },
+    { "AvailabilityKey": "SYN-AV002", "ConsultantKey": "SYN-C002", "StartDate": "2026-11-01", "EndDate": "2026-11-07", "AvailableHoursPerWeek": 30, "Status": "Confirmed" }
+  ]
+}

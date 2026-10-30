@@ -1,0 +1,7 @@
+{
+  "name": "production",
+  "enabled": false,
+  "siteAllowlist": [],
+  "environmentAllowlist": [],
+  "notes": "Deny by default. Production access and writes are out of scope for the first release."
+}

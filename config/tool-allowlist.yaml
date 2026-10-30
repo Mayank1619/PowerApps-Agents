@@ -1,0 +1,21 @@
+version: 1
+status: proposed
+default_profile:
+  mode: read_only
+  enabled_tools: []
+  denied_capabilities:
+    - arbitrary_graph_requests
+    - arbitrary_url_fetch
+    - arbitrary_command_execution
+    - credential_storage
+    - production_writes
+    - delete
+  approval_required:
+    - any_external_write
+    - publish
+    - deploy
+    - share
+    - permission_change
+notes:
+  - "No MCP server or tool is enabled by this policy file."
+  - "Add tools only after publisher, source, permissions, and behavior are verified."

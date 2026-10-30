@@ -1,0 +1,67 @@
+# Inert template: GitHub Actions does not load this .disabled file.
+# Copy to an approved workflow path only after protecting the target environment.
+# Replace every placeholder with a verified Microsoft-supported package procedure.
+
+name: Disabled Deployment Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_environment:
+        description: Explicit approved environment
+        type: choice
+        required: true
+        options:
+          - development
+          - test
+          - production
+      artifact_version:
+        description: Immutable validated artifact version
+        type: string
+        required: true
+      approver:
+        description: Named human approver
+        type: string
+        required: true
+      approval_record:
+        description: Change/approval record reference
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  pre-deployment:
+    if: ${{ inputs.target_environment != '' && inputs.artifact_version != '' && inputs.approver != '' && inputs.approval_record != '' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.target_environment }}
+      # Configure required reviewers/protection outside this repository before activation.
+    steps:
+      - name: Fail until the package verification procedure is approved
+        run: |
+          echo "No deployment command is configured in this template."
+          exit 1
+
+  deployment-placeholder:
+    needs: pre-deployment
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.target_environment }}
+    steps:
+      - name: No-op placeholder
+        run: |
+          echo "Replace only with an approved, reviewed deployment procedure."
+          exit 1
+
+  post-deployment:
+    needs: deployment-placeholder
+    runs-on: ubuntu-latest
+    steps:
+      - name: No-op smoke-test placeholder
+        run: |
+          echo "Document and run approved post-deployment tests."
+          exit 1
+
+# Rollback requires a separately approved procedure and must not be automated by this template.

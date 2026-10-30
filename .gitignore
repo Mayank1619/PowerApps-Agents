@@ -1,0 +1,57 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+secrets/
+**/secrets/
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+*.keystore
+**/.auth/
+**/.azure/
+**/.powerplatform/
+**/msal-cache*
+**/token-cache*
+**/.IdentityService/
+.vscode/mcp.json
+**/mcp.local.json
+
+# User- and machine-specific state
+.DS_Store
+Thumbs.db
+*.user
+*.suo
+*.cache
+*.tmp
+*.temp
+*.log
+**/telemetry/
+**/telemetry-*.json
+
+# Dependencies and generated output
+node_modules/
+**/node_modules/
+dist/
+coverage/
+.local-output/
+deployment-output/
+**/deployment-output/
+**/temp/
+**/tmp/
+
+# Power BI Desktop local state and caches
+**/.pbi/localSettings.json
+**/AnalysisServicesWorkspace*/
+**/Cache.abf
+**/DataModelSchema*.json.tmp
+
+# Python and test caches
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/

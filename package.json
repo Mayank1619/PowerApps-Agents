@@ -1,0 +1,11 @@
+{
+  "name": "power-platform-ai-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/unit/workspace-checks.test.mjs",
+    "lint": "node --check scripts/validate/workspace-checks.mjs && node --check scripts/validate/validate-all.mjs && node --check scripts/validate/secrets-check.mjs && node --check tests/unit/workspace-checks.test.mjs",
+    "security": "node scripts/validate/secrets-check.mjs",
+    "validate": "node scripts/validate/validate-all.mjs"
+  }
+}

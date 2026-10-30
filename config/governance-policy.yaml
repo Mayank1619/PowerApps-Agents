@@ -1,0 +1,18 @@
+version: 1
+status: proposed
+defaults:
+  external_model_apis: deny
+  production_targeting: deny
+  live_writes: deny
+  destructive_operations: deny
+  sharing_and_permission_changes: deny
+  default_tool_mode: read_only
+  human_approval_required:
+    - publish
+    - deploy
+    - share
+    - change_permissions
+    - production_write
+    - delete
+  sensitive_data_in_logs: deny
+  production_data_in_fixtures: deny

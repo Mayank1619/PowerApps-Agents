@@ -1,0 +1,13 @@
+version: 1
+status: proposed
+rules:
+  identifiers:
+    style: descriptive
+    avoid: ["temporary names", "ambiguous abbreviations", "environment IDs"]
+  power_bi:
+    tables: "Business-readable singular or plural form, consistently applied"
+    measures: "Business definition first; exact names require requirements approval"
+  power_automate:
+    flows: "Verb-led name describing business purpose"
+  sharepoint:
+    columns: "Preserve internal names; document display names separately"

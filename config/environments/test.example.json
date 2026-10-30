@@ -1,0 +1,7 @@
+{
+  "name": "test",
+  "enabled": false,
+  "siteAllowlist": [],
+  "environmentAllowlist": [],
+  "notes": "Template only. Add approved identifiers outside source control and enable only after review."
+}
